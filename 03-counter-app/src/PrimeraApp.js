@@ -12,7 +12,7 @@ const PrimeraApp = ({ saludo, subtitulo }) => {
   );
 };
 
-PrimeraApp.protoTypes = {
+PrimeraApp.propTypes = {
   saludo: PropTypes.string.isRequired,
   subtitulo: PropTypes.string.isRequired,
 };
