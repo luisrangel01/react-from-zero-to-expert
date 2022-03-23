@@ -6,4 +6,4 @@ import PrimeraApp from './PrimeraApp';
 
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(<PrimeraApp />, divRoot);
+ReactDOM.render(<PrimeraApp saludo='Soy Vegeta' />, divRoot);
