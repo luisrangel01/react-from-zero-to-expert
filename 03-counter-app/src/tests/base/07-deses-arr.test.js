@@ -9,5 +9,8 @@ describe(`Pruebas en 07-deses-arr.js`, () => {
     console.log(array);
 
     expect(array).toEqual(arrayTest);
+
+    expect(edad).toBe(123);
+    expect(typeof array[1]).toBe('number');
   });
 });
