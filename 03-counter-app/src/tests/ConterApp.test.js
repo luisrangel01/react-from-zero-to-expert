@@ -47,4 +47,16 @@ describe('Pruebas en <CounterApp />', () => {
 
     expect(textoCounter).toBe(value.toString());
   });
+
+  test('debe de reiniciar contador con el boton reset', () => {
+    const value = 55;
+    const wrapper = shallow(<CounterApp value={value} />);
+
+    wrapper.find('button').at(1).simulate('click');
+
+    const textoCounter = wrapper.find('h2').text().trim();
+    console.log({ textoCounter });
+
+    expect(textoCounter).toBe(value.toString());
+  });
 });
