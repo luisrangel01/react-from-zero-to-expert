@@ -52,9 +52,12 @@ describe('Pruebas en <CounterApp />', () => {
     const value = 55;
     const wrapper = shallow(<CounterApp value={value} />);
 
-    wrapper.find('button').at(1).simulate('click');
+    wrapper.find('button').at(0).simulate('click');
+    let textoCounter = wrapper.find('h2').text().trim();
+    console.log({ textoCounter });
 
-    const textoCounter = wrapper.find('h2').text().trim();
+    wrapper.find('button').at(1).simulate('click');
+    textoCounter = wrapper.find('h2').text().trim();
     console.log({ textoCounter });
 
     expect(textoCounter).toBe(value.toString());
