@@ -14,9 +14,9 @@ describe('Pruebas en <CounterApp />', () => {
     const value = 100;
     const wrapper = shallow(<CounterApp value={value} />);
 
-    const textoPaffafo = wrapper.find('h2').text();
-    console.log({ textoPaffafo });
+    const textoTitulo = wrapper.find('h2').text().trim();
+    console.log({ textoTitulo });
 
-    expect(textoPaffafo).toBe(value.toString());
+    expect(textoTitulo).toBe(value.toString());
   });
 });
