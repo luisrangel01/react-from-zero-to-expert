@@ -1,7 +1,7 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
 
-import { GifGridItem } from '../../components/GifGridItem';
+import { GifGridItem } from '../../src/components/GifGridItem';
 
 describe('Pruebas en <GifGridItem />', () => {
   const title = 'Un titulo';
@@ -12,7 +12,7 @@ describe('Pruebas en <GifGridItem />', () => {
   };
 
   test('debe de mostrar el componente correctamente', () => {
-    const wrapper = shallow(<GifGridItem img={img} />);
-    expect(wrapper).toMatchSnapshot();
+    const { container } = render(<GifGridItem img={img} />);
+    expect(container).toMatchSnapshot();
   });
 });
