@@ -4,7 +4,9 @@ import { Message } from './Message';
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({ username: 'luisrangelc', email: 'luisrangelc@google.com' });
+
   const { username, email } = formState;
+  
   const onInputChange = (event) => {
     const { name, value } = event.target;
 
